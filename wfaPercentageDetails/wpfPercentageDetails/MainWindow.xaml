@@ -1,0 +1,70 @@
+﻿<Window x:Class="wpfPercentageDetails.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpfPercentageDetails"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="839" Width="1500">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="20*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40*"/>
+                <RowDefinition Height="60*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="ei" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBox x:Name="Edei" Grid.Column="1"/>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="es" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBox x:Name="Edes" Grid.Column="1"/>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="x_htrih" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBox x:Name="Edx_htrih" Grid.Column="1"/>
+                </Grid>
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="sigma" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBox x:Name="Edsigma" Grid.Column="1"/>
+                </Grid>
+                <Button Content="Добавить график" x:Name="buAdd" Grid.Row="4"/>
+                <Button Content="Очистить" x:Name="buClear" Grid.Row="5"/>
+                
+            </Grid>
+            <TreeView x:Name="treeView1" Grid.Row="1"/>
+        </Grid>
+        <Image x:Name="pictureBox1" Grid.Column="1"/>
+        <Label x:Name="textBox" Content="Данные..." Grid.Column="2"/>
+    </Grid>
+</Window>
